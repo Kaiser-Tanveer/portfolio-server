@@ -1,0 +1,29 @@
+# fly.toml file generated for your app
+app = "Kaiser-Tanveer's-Portfolio"  # Replace with your app name
+
+kill_signal = "SIGINT"  # Signal used to stop your app
+kill_timeout = 5        # Duration to wait before killing your app
+
+[build]
+  # If using a specific builder, e.g. for Docker
+  # dockerfile = "Dockerfile"
+
+[env]
+  # Define environment variables
+  NODE_ENV = "production"
+
+[[services]]
+  http_checks = []
+  
+  [http_service]
+    # Configure the service
+    internal_port = 3000  # Your app's port
+    auto_steal = true
+
+    [[http_service.ports]]
+      handlers = ["http"]
+      port = "80"  # Public port
+
+    [[http_service.ports]]
+      handlers = ["tls", "http"]
+      port = "443"  # Secure port
