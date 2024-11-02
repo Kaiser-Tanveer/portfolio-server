@@ -1,3 +1,8 @@
-node_modules
-.vercel
-.evn
+# Node modules
+node_modules/
+
+# Vercel configuration
+.vercel/
+
+# Environment variables
+.env
