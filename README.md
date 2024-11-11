@@ -18,7 +18,7 @@ To get started with the project, follow the steps below:
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Kaiser-Tanveer/portfolio-server.git
     ```
 
 2. Navigate to the project directory:
